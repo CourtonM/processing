@@ -1,0 +1,42 @@
+void setup(){
+background(100);
+size(500, 500);
+}
+int grey = 50;
+int red = 200;
+int Red = 255;
+int rise = 10;
+void draw(){
+    //rectangle
+  strokeWeight(5);
+  stroke(100, 0, 0);
+  
+  if(mouseX>190 && mouseY>220 && mouseX<310 && mouseY<280) {
+  fill(red,0, 0); 
+  } else { 
+  fill(grey,0, 0);
+  }
+  rect(190, 220, 120, 60, 20, 20, 20, 20);
+  //text
+  textSize(32);
+  fill(255);
+  text("PUSH", 210, 263);
+  //bar
+  stroke(255);
+  fill(0);
+  rect(20, 350, 460, 80);
+  noStroke();
+  fill(0,200,200);
+  rect(23, 353, rise, 75);
+}
+
+void mouseClicked(){
+       if (mouseX>190 && mouseY>220 && mouseX<310 && mouseY<280){
+         red = Red;
+         
+         rise = rise +10;
+     if (rise > 455){
+       rise = 455;
+     }
+   }
+}
